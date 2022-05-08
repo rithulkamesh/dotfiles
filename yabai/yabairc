@@ -5,11 +5,10 @@
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
-SPACEBAR_HEIGHT=$(spacebar -m config height)
-yabai -m config external_bar all:$SPACEBAR_HEIGHT:0
+yabai -m config external_bar all:0:0
 # global settings
-yabai -m config mouse_follows_focus          on
-yabai -m config focus_follows_mouse          autoraise
+yabai -m config mouse_follows_focus          off
+yabai -m config focus_follows_mouse          off
 yabai -m config window_placement             second_child
 yabai -m config window_topmost               on
 yabai -m config window_shadow                off
@@ -18,13 +17,13 @@ yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1.0
 yabai -m config normal_window_opacity        0.85
 yabai -m config window_border                on
-yabai -m config window_border_width          6
+yabai -m config window_border_width          4
 yabai -m config active_window_border_color   0xff775759
 yabai -m config normal_window_border_color   0xff555555
 yabai -m config insert_feedback_color        0xaad75f5f
 yabai -m config split_ratio                  0.50
 yabai -m config auto_balance                 on
-yabai -m config mouse_modifier               fn
+yabai -m config mouse_modifier               control
 yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
 
@@ -44,7 +43,6 @@ yabai -m space 4 --label notes
 yabai -m space 5 --label re
 yabai -m space 6 --label media
 yabai -m space 7 --label social
-yabai -m space 8 --label games
 
 # specific space settings
 yabai -m config --space mail  layout        stack
@@ -53,14 +51,12 @@ yabai -m config --space games layout        float
 # window rules
 yabai -m rule --add app="^Microsoft Outlook$" space=mail
 yabai -m rule --add app="^Firefox$" space=web
-yabai -m rule --add app="^Inkdrop$" space=notes
-yabai -m rule --add app="^Transmission$" space=media
+yabai -m rule --add app="^Inkdrop$" space=notes manage=off
 yabai -m rule --add app="^Spotify$" space=media
 yabai -m rule --add app="^Discord$" space=social grid=1:1:0:0:1:1 manage=off
 yabai -m rule --add app="^Steam$" space=games manage=off
-yabai -m rule --add app="^System Preferences$" manage=off
-yabai -m rule --add title="^Zirconium$" manage=off
-
+yabai -m rule --add app="app" title="Sumbox" manage=off
+yabai -m rule --add app="Surfshark" manage=off
 # signals
 yabai -m signal --add event=window_destroyed active=yes action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null"
 # yabai -m signal --add event=window_destroyed action="echo \"destroyed window with id \$YABAI_WINDOW_ID\""

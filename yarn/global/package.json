@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "create-next-app": "^12.1.5"
+    "create-next-app": "^12.1.5",
+    "create-tauri-app": "^1.0.0-rc.3"
   }
 }

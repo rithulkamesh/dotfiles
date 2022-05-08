@@ -5,7 +5,9 @@ if status is-interactive
     export LANG='en_US.UTF-8'
     export LC_ALL='en_US.UTF-8'
     export EDITOR='/usr/local/bin/vim'
-    alias devenv='pushd ~/Programming && tmux && popd'
+    alias lg="lazygit"
+    alias cl="clear"
+    alias devenv='tmux a || tmux'
     alias gitlog='git log --all --graph --pretty=format:"%Cred%h%Creset %C(bold blue)%an%Creset :%C(yellow)%d%Creset %s %Cgreen(%cr) %Creset" --abbrev-commit'
     alias nosleep='caffeinate -d'
     alias ls='exa -al --color=always --group-directories-first --icons' # preferred listing

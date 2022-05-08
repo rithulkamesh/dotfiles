@@ -1,0 +1,7 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["py", "yaml", "json", "js", "ts" ,"jsx", "tsx", "css", "scss", "html"],
+  "python.linting.flake8Enabled": true,
+  "python.formatting.provider": "black",
+  "javascript.formatting.provider" : "prettier", 
+}
+
