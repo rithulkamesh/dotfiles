@@ -1,6 +1,6 @@
-cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
+cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ tmux new-session -A -s default
 
-# focus window
+# Focusing Windows 
 alt - x : yabai -m window --focus recent
 alt - h : yabai -m window --focus west
 alt - j : yabai -m window --focus south
@@ -36,7 +36,7 @@ shift + alt - right  : yabai -m window --grid 1:2:1:0:1:1
 
 # create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
 shift + cmd - n : yabai -m space --create && \
-                  index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
+                  index="t$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
                   yabai -m window --space "${index}" && \
                   yabai -m space --focus "${index}"
 
@@ -122,3 +122,4 @@ alt - p : yabai -m window --toggle border && \
 ctrl + alt - a : yabai -m space --layout bsp
 ctrl + alt - d : yabai -m space --layout float
 ctrl + alt - s : yabai -m space --layout $(yabai -m query --spaces --space | jq -r 'if .type == "bsp" then "float" else "bsp" end')
+

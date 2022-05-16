@@ -137,8 +137,9 @@ if exists("&termguicolors") && exists("&winblend")
   set wildoptions=pum
   set pumblend=5
   set background=dark
-  let g:onedark_config = {'style': 'cool'}
-  colorscheme onedark
+  let g:neosolarized_termtrans=1
+  runtime ./colors/NeoSolarized.vim
+  colorscheme NeoSolarized
   hi Normal guibg=NONE ctermbg=NONE
   hi EndOfBuffer guibg=NONE ctermbg=NONE
 endif

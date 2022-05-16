@@ -35,30 +35,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "Map ctrl + [ to escape",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "open_bracket",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ],
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "escape"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
@@ -87,32 +63,6 @@
                     },
                     "ignore": false,
                     "manipulate_caps_lock_led": false,
-                    "simple_modifications": []
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 591,
-                        "vendor_id": 1452
-                    },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": true,
-                    "simple_modifications": []
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": false,
-                    "fn_function_keys": [],
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": false,
-                        "product_id": 6365,
-                        "vendor_id": 2821
-                    },
-                    "ignore": false,
-                    "manipulate_caps_lock_led": true,
                     "simple_modifications": []
                 }
             ],
@@ -163,7 +113,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "display_brightness_decrement"
+                            "consumer_key_code": "dictation"
                         }
                     ]
                 },
@@ -173,7 +123,7 @@
                     },
                     "to": [
                         {
-                            "consumer_key_code": "display_brightness_increment"
+                            "key_code": "f6"
                         }
                     ]
                 },
@@ -250,7 +200,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "left_control"
+                            "key_code": "escape"
                         }
                     ]
                 }
