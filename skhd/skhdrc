@@ -1,4 +1,4 @@
-cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ tmux new-session -A -s default
+cmd - return : /opt/homebrew/bin/kitty --single-instance -d ~ tmux new-session -A -s default
 
 # Focusing Windows 
 alt - x : yabai -m window --focus recent
