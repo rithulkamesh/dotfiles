@@ -8,9 +8,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
 if has("nvim")
-  Plug 'andweeb/presence.nvim'
   Plug 'maralla/completor.vim'
-  Plug 'fatih/vim-go'
   Plug 'hoob3rt/lualine.nvim'
   Plug 'kristijanhusak/defx-git'
   Plug 'kristijanhusak/defx-icons'
@@ -41,7 +39,6 @@ if has("nvim")
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'tpope/vim-fugitive'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'navarasu/onedark.nvim' 
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

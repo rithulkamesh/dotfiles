@@ -84,7 +84,7 @@ if &term =~ "screen"
   autocmd VimLeave * silent!  exe '!echo -n "\ek[`hostname`:`basename $PWD`]\e\\"'
 endif
 
-let g:airline_theme='onedark'
+let g:airline_theme='afterglow'
 "}}}
 
 " File types "{{{
@@ -139,7 +139,7 @@ if exists("&termguicolors") && exists("&winblend")
   set background=dark
   let g:neosolarized_termtrans=1
   runtime ./colors/NeoSolarized.vim
-  colorscheme NeoSolarized
+  colorscheme NeoSolarized 
   hi Normal guibg=NONE ctermbg=NONE
   hi EndOfBuffer guibg=NONE ctermbg=NONE
 endif
@@ -149,56 +149,12 @@ endif
 " Extras "{{{
 " ---------------------------------------------------------------------
 set exrc
-map <C-n> :NERDTreeToggle<CR>
+map <C-n>:NERDTreeShowHidden<CR>
 let NERDTreeShowHidden=1 " Show hidden files in NerdTree buffer.
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 "}}}
-
-"Language Specifics "{{{
-" ----------------------------------------------------------------------
-
-"Golang
-filetype plugin indent on
-
-set autowrite
-
-" Go syntax highlighting
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_operators = 1
-
-" Auto formatting and importing
-let g:go_fmt_autosave = 1
-let g:go_fmt_command = "goimports"   
-"}}}
-
-" Discord Prescence "{{{
-" ----------------------------------------------------------------------
-  " General options
-let g:presence_auto_update         = 1
-let g:presence_neovim_image_text   = "The One True Text Editor"
-let g:presence_main_image          = "neovim"
-let g:presence_client_id           = "793271441293967371"
-let g:presence_debounce_timeout    = 10
-let g:presence_enable_line_number  = 0
-let g:presence_blacklist           = []
-let g:presence_buttons             = 1
-let g:presence_file_assets         = {}
-
-" Rich Presence text options
-let g:presence_editing_text        = "Editing %s"
-let g:presence_file_explorer_text  = "Browsing %s"
-let g:presence_git_commit_text     = "Committing changes"
-let g:presence_plugin_manager_text = "Managing plugins"
-let g:presence_reading_text        = "Reading %s"
-let g:presence_workspace_text      = "Working on %s"
-let g:presence_line_number_text    = "Line %s out of %s"
-"}}}
-
 
 " vim: set foldmethod=marker foldlevel=0:

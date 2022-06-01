@@ -17,3 +17,6 @@ if status is-interactive
     alias l='exa -lah --color=always --group-directories-first --icons' # tree listing
 end
 
+function task
+    python $HOME/.config/scripts/task.py -t "$argv"
+end
