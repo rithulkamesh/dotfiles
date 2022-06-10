@@ -22,7 +22,7 @@ yabai -m config bottom_padding               8
 yabai -m config left_padding                 8
 yabai -m config right_padding                8
 yabai -m config window_gap                   8
-yabai -m config external_bar main:28:60
+yabai -m config external_bar main:0:60
 
 # space 1: terminals
 yabai -m rule --add app="iTerm2" space=^1 display=1

@@ -8,6 +8,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
 if has("nvim")
+  Plug 'morhetz/gruvbox'
   Plug 'maralla/completor.vim'
   Plug 'hoob3rt/lualine.nvim'
   Plug 'kristijanhusak/defx-git'

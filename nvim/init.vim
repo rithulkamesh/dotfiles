@@ -1,5 +1,10 @@
 " Fundamentals "{{{
 " ---------------------------------------------------------------------
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Up> <Nop>
+noremap <Right> <Nop>
 
 " init autocmd
 autocmd!
@@ -84,7 +89,8 @@ if &term =~ "screen"
   autocmd VimLeave * silent!  exe '!echo -n "\ek[`hostname`:`basename $PWD`]\e\\"'
 endif
 
-let g:airline_theme='afterglow'
+let g:airline_theme='gruvbox'
+
 "}}}
 
 " File types "{{{
@@ -139,7 +145,7 @@ if exists("&termguicolors") && exists("&winblend")
   set background=dark
   let g:neosolarized_termtrans=1
   runtime ./colors/NeoSolarized.vim
-  colorscheme NeoSolarized 
+  colorscheme gruvbox
   hi Normal guibg=NONE ctermbg=NONE
   hi EndOfBuffer guibg=NONE ctermbg=NONE
 endif
