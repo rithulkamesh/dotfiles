@@ -34,7 +34,7 @@ yabai -m rule --add app="Paw" space=^2
 yabai -m rule --add app="JetBrains Rider.*" space=^2
 yabai -m rule --add app="JetBrains Rider.*" title="Preferences" space=^2 manage=off
 # space 3: web and email
-yabai -m rule --add app="Brave" space=^3
+yabai -m rule --add app="Safari" space=^3
 yabai -m rule --add app="Microsoft Outlook" space=^3
 
 # space 4: floating

@@ -1,7 +1,7 @@
 import argparse
 import os
 
-path = os.path.expanduser('~') + "/Library/Application Support/Übersicht/widgets/currentTask/data.json"
+path = os.path.expanduser('~') + "/Library/Application Support/Übersicht/widgets/current-task-widget/data.json"
 # get args from command line and set the task in path
 parser = argparse.ArgumentParser()
 parser.add_argument("-t", "--task", help="set the task")
