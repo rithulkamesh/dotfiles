@@ -3,5 +3,17 @@
   "python.linting.flake8Enabled": true,
   "python.formatting.provider": "black",
   "javascript.formatting.provider" : "prettier", 
+  "languageserver": {
+  "ccls": {
+    "command": "ccls",
+    "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+    "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+    "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+  }
+}
 }
 

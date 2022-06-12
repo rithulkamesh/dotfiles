@@ -20,3 +20,7 @@ end
 function task
     python $HOME/.config/scripts/task.py -t "$argv"
 end
+
+function lilith
+    $HOME/.config/scripts/lilith
+end
