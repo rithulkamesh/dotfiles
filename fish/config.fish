@@ -1,4 +1,5 @@
 if status is-interactive
+  source /opt/homebrew/lib/python3.9/site-packages/powerline/bindings/fish/powerline-setup.fish
     zoxide init fish | source
     set fish_greeting
     export LANG='en_US.UTF-8'
