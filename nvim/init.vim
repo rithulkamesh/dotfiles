@@ -1,5 +1,7 @@
 " Fundamentals "{{{
 " ---------------------------------------------------------------------
+"  Removing arrow keys and forcing use of hjkl
+
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
@@ -68,7 +70,9 @@ autocmd InsertLeave * set nopaste
 " Add asterisks in block comments
 set formatoptions+=r
 
-"}}}" Highlights "{{{
+"}}}
+
+" Highlights "{{{
 " ---------------------------------------------------------------------
 set cursorline
 "set cursorcolumn
@@ -88,8 +92,6 @@ if &term =~ "screen"
   autocmd BufEnter * if bufname("") !~ "^?[A-Za-z0-9?]*://" | silent! exe '!echo -n "\ek[`hostname`:`basename $PWD`/`basename %`]\e\\"' | endif
   autocmd VimLeave * silent!  exe '!echo -n "\ek[`hostname`:`basename $PWD`]\e\\"'
 endif
-
-let g:airline_theme='gruvbox'
 
 "}}}
 
@@ -143,11 +145,10 @@ if exists("&termguicolors") && exists("&winblend")
   set wildoptions=pum
   set pumblend=5
   set background=dark
-  let g:neosolarized_termtrans=1
-  runtime ./colors/NeoSolarized.vim
   colorscheme gruvbox
   hi Normal guibg=NONE ctermbg=NONE
   hi EndOfBuffer guibg=NONE ctermbg=NONE
+  let g:airline_theme='gruvbox'
 endif
 
 "}}}
@@ -155,12 +156,6 @@ endif
 " Extras "{{{
 " ---------------------------------------------------------------------
 set exrc
-map <C-n>:NERDTreeShowHidden<CR>
-let NERDTreeShowHidden=1 " Show hidden files in NerdTree buffer.
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
 "}}}
 
 " vim: set foldmethod=marker foldlevel=0:

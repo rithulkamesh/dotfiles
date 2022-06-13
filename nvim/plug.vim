@@ -9,9 +9,9 @@ Plug 'tpope/vim-rhubarb'
 
 if has("nvim")
   Plug 'morhetz/gruvbox'
-  Plug 'maralla/completor.vim'
-  Plug 'hoob3rt/lualine.nvim'
   Plug 'kristijanhusak/defx-git'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
   Plug 'kristijanhusak/defx-icons'
   Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'neovim/nvim-lspconfig'
@@ -30,19 +30,10 @@ if has("nvim")
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'windwp/nvim-autopairs'
   Plug 'windwp/nvim-ts-autotag'
-  Plug 'kien/ctrlp.vim'
-  Plug 'scrooloose/nerdcommenter'
-  Plug 'tmhedberg/matchit'
-  Plug 'scrooloose/nerdtree'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  Plug 'sheerun/vim-polyglot'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'tpope/vim-fugitive'
-  Plug 'jiangmiao/auto-pairs'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 call plug#end()
+

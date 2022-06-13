@@ -1,6 +1,5 @@
 if status is-interactive
     zoxide init fish | source
-    starship init fish | source
     set fish_greeting
     export LANG='en_US.UTF-8'
     export LC_ALL='en_US.UTF-8'
