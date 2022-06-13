@@ -26,6 +26,7 @@ yabai -m config external_bar main:0:0
 
 # space 4: Development
 yabai -m rule --add app="Alacritty" space=^3 display=1
+yabai -m rule --add app="Kitty" space=^3 display=1
 yabai -m rule --add app="Paw" space=^4
 
 # space 5: web and email
