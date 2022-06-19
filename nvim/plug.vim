@@ -8,6 +8,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 
 if has("nvim")
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'morhetz/gruvbox'
   Plug 'kristijanhusak/defx-git'
   Plug 'vim-airline/vim-airline'
